@@ -1,0 +1,29 @@
+// Colors
+$darkest-color: #e26a2c;
+$dark-color: #ff8243;
+$light-color: #fda65d;
+$lightest-color: #ffd07f;
+$main-font-color: #93390b;
+
+// Spacings
+$regular-spacing: 10px;
+$small-spacing: 7px;
+
+@mixin input-wrapper {
+  border: 2px solid $darkest-color;
+  background-color: #fff;
+  display: flex;
+  border-radius: 50px;
+  padding: $regular-spacing;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin input-element {
+  width: 95%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-left: $regular-spacing;
+  color: $main-font-color;
+}

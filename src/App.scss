@@ -1,0 +1,112 @@
+@import './styles/application.scss';
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $main-font-color;
+
+  .input-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 10px;
+    width: 32rem;
+    margin: 0 auto;
+
+    &-add {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    width: 32rem;
+    margin: 0 auto;
+    border: 5px solid $darkest-color;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 5px 15px 5px rgba(194, 194, 194, 0.86);
+    box-shadow: 2px 5px 15px 5px rgba(194, 194, 194, 0.86);
+
+    &-header {
+      display: flex;
+      align-items: center;
+      background-color: $darkest-color;
+      color: #fff;
+      padding: 10px;
+      font-weight: 700;
+      border-bottom: 2px solid $darkest-color;
+
+      .btn--primary:hover svg {
+        fill: #fff;
+      }
+      // .btn--secondary:hover svg {
+      //   fill: $main-font-color;
+      // }
+    }
+
+    &-item {
+      display: flex;
+      flex-wrap: nowrap;
+      align-content: center;
+      &:nth-child(even) {
+        background: $lightest-color;
+      }
+      &:nth-child(odd) {
+        background: #fff;
+      }
+
+      &-text {
+        flex-grow: 1;
+        margin: auto;
+        padding: 10px;
+      }
+
+      &-icon {
+        display: flex;
+        padding: 10px;
+        align-content: center;
+        border-left: 2px solid $darkest-color;
+      }
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    display: flex;
+
+    &--primary {
+      color: #fff;
+      svg {
+        fill: $main-font-color;
+      }
+    }
+
+    &--secondary {
+      color: $main-font-color;
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  .margin {
+    &-left {
+      margin-left: 7px;
+    }
+    &-right {
+      margin-right: 7px;
+    }
+    &-top {
+      margin-top: 7px;
+    }
+    &-bottom {
+      margin-bottom: 7px;
+    }
+  }
+
+  .no-results {
+    padding: 10px;
+    text-align: center;
+  }
+}
