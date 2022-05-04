@@ -1,0 +1,11 @@
+.search {
+  @include input-wrapper;
+
+  input {
+    @include input-element;
+  }
+
+  &-icon {
+    text-align: center;
+  }
+}

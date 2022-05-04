@@ -1,6 +1,6 @@
 @import './styles/application.scss';
 
-.container {
+.application {
   font-family: Arial, Helvetica, sans-serif;
   color: $main-font-color;
 
@@ -8,13 +8,23 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding: 10px;
+    padding: $regular-spacing;
     width: 32rem;
     margin: 0 auto;
 
     &-add {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+
+      .text-input {
+        @include input-wrapper;
+        margin-left: $regular-spacing;
+
+        input {
+          @include input-element;
+        }
+      }
     }
   }
 
@@ -33,16 +43,19 @@
       align-items: center;
       background-color: $darkest-color;
       color: #fff;
-      padding: 10px;
+      padding: $regular-spacing;
       font-weight: 700;
       border-bottom: 2px solid $darkest-color;
 
       .btn--primary:hover svg {
         fill: #fff;
       }
-      // .btn--secondary:hover svg {
-      //   fill: $main-font-color;
-      // }
+
+      &-detail {
+        font-weight: normal;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1rem;
+      }
     }
 
     &-item {
@@ -59,12 +72,12 @@
       &-text {
         flex-grow: 1;
         margin: auto;
-        padding: 10px;
+        padding: $regular-spacing;
       }
 
       &-icon {
         display: flex;
-        padding: 10px;
+        padding: $regular-spacing;
         align-content: center;
         border-left: 2px solid $darkest-color;
       }
@@ -92,21 +105,21 @@
 
   .margin {
     &-left {
-      margin-left: 7px;
+      margin-left: $small-spacing;
     }
     &-right {
-      margin-right: 7px;
+      margin-right: $small-spacing;
     }
     &-top {
-      margin-top: 7px;
+      margin-top: $small-spacing;
     }
     &-bottom {
-      margin-bottom: 7px;
+      margin-bottom: $small-spacing;
     }
   }
 
   .no-results {
-    padding: 10px;
+    padding: $regular-spacing;
     text-align: center;
   }
 }
