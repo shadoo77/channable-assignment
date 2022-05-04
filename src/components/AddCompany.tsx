@@ -14,6 +14,7 @@ function AddCompany() {
   };
 
   const handleAddNew = () => {
+    // Prevent adding empty text
     if (!text) {
       return;
     }

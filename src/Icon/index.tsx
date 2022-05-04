@@ -13,21 +13,23 @@ export enum IconName {
   'SearchIcon' = 'SearchIcon'
 }
 
+// These aren't required
 export interface IIconExtendedProps {
   size?: string | number;
   viewBox?: string;
   fillColor?: string;
 }
 
+// This is required
 interface IIconProps extends IIconExtendedProps {
   name: IconName;
 }
 
-interface ILocales {
+interface IIcons {
   [key: string]: (props: IIconExtendedProps) => ReactElement;
 }
 
-const icons: ILocales = {
+const icons: IIcons = {
   TrashIcon,
   ArrowUpIcon,
   ArrowDownIcon,

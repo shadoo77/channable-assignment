@@ -9,6 +9,7 @@ $main-font-color: #93390b;
 $regular-spacing: 10px;
 $small-spacing: 7px;
 
+// Mixins
 @mixin input-wrapper {
   border: 2px solid $darkest-color;
   background-color: #fff;
